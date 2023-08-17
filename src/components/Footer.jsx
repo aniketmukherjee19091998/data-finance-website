@@ -52,22 +52,22 @@ const Footer = () => {
                         return (
                             <div key={data.id}>
                                 <h1 className='font-medium md:text-xl sm:text-sm text-gray-400'>{data.Title}</h1>
-                                {data.List.map((item) => {
-                                    let i = Math.random()
-                                    // I know it's stupid but I am too dumb to do anything about this
-                                    //// console.log("key : " + i)
-                                    return (
-                                        <ul key={i}>
-                                            <li className='py-2 text-sm'>{item}</li>
-                                        </ul>
-                                    )
-                                })}
+                                < ul >
+                                    {data.List.map((item) => {
+                                        let i = Math.random()
+                                        // I know it's stupid but I am too dumb to do anything about this
+                                        //// console.log("key : " + i)
+                                        return (
+                                            <li key={i} className='py-2 text-sm'>{item}</li>
+                                        )
+                                    })}
+                                </ul>
                             </div>
                         )
                     })
                 }
             </div>
-        </div>
+        </div >
     )
 }
 
